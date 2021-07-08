@@ -11,8 +11,6 @@
 @import "variables";
 @import "mixins";
 @import "utilities";
-
-// Layout & components
 @import "root";
 @import "reboot";
 @import "type";
@@ -43,10 +41,40 @@
 @import "carousel";
 @import "spinners";
 @import "offcanvas";
-
-// Helpers
 @import "helpers";
-
-// Utilities
 @import "utilities/api";
-// scss-docs-end import-stack
+
+.logo-text-icon {
+	font-family: Poppins, sans-serif;
+	font-weight: 500;
+	font-size: 26px;
+	color: $primary;
+	text-decoration: none;
+}
+
+header {
+	border-bottom: 1px solid $gray-200;
+	width: 100%;
+	position: relative;
+	right: 0;
+	.navbar {
+		height: 80px;
+		.navbar-nav {
+			.nav-item {
+				&.active {
+					.nav-link {
+						color: red;
+					}
+				}
+				.nav-link {
+					color: $dark;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
