@@ -16,6 +16,7 @@
 @import "type";
 @import "images";
 @import "containers";
+@import "container-grid";
 @import "grid";
 @import "tables";
 @import "forms";
@@ -44,6 +45,14 @@
 @import "helpers";
 @import "utilities/api";
 
+.text-gray-400 {
+	color: $gray-400;
+}
+
+.text-dark {
+	color: $dark;
+}
+
 .logo-text-icon {
 	font-family: Poppins, sans-serif;
 	font-weight: 500;
@@ -52,18 +61,24 @@
 	text-decoration: none;
 }
 
+section {
+	margin-bottom: 70px;
+	text-decoration: none;
+}
+
 header {
 	border-bottom: 1px solid $gray-200;
 	width: 100%;
 	position: relative;
 	right: 0;
+	margin-bottom: 20px;
 	.navbar {
 		height: 80px;
 		.navbar-nav {
 			.nav-item {
 				&.active {
 					.nav-link {
-						color: red;
+						color: gray;
 					}
 				}
 				.nav-link {
@@ -74,6 +89,131 @@ header {
 						text-decoration: underline;
 					}
 				}
+			}
+		}
+	}
+}
+
+.img-hero {
+	width: 520px;
+	height: 410px;
+	z-index: 1;
+}
+.frame {
+	width: 520px;
+	height: 410px;
+}
+
+.img-cover {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+// img-cover apabila ukuran cover awal 400x400 sedangkan img kita 600x400, maka gambar akan mengikuti 400x400
+
+.img-contain {
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
+}
+// img-contain apabila ukuran cover awal 400x400 sedangkan img kita 600x400, maka gambar akan mengikuti 600x400 tetapi dengan ukuran cover awal 600x400
+
+.card {
+	height: 100%;
+
+	.tag {
+		position: absolute;
+		z-index: 3;
+		background-color: $pink;
+		color: white;
+		top: 0;
+		right: 0;
+		border-radius: 0px 15px;
+		min-height: 30px;
+		padding: 0.25rem 1.25rem;
+		font-size: 0.875rem;
+
+		.text-price {
+			font-weight: 500;
+		}
+		span {
+			font-weight: 300;
+		}
+	}
+
+	.img-wrapper {
+		height: 100%;
+		margin-bottom: 0;
+		overflow: hidden;
+		border-radius: 0.9375rem;
+	}
+
+	.meta-wrapper {
+		margin-top: 1rem;
+		h5 {
+			font-size: 1.125rem;
+			margin-bottom: 2px;
+		}
+		span {
+			font-size: 0.875rem;
+		}
+	}
+
+	&.card-featured {
+		overflow: hidden;
+		cursor: pointer;
+		height: 100%;
+		border-radius: 15px;
+
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			transform: scale(1.1);
+			transition: 0.5s transform ease-in-out;
+			z-index: 2;
+			@include gradient-y(rgba($dark, 0), rgba($dark, 0.51), 0%, 100%);
+		}
+
+		.img-wrapper {
+			z-index: 1;
+			position: absolute;
+			margin: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			transform: scale(1.1);
+			transition: 0.25s transform ease-in-out;
+		}
+
+		.meta-wrapper {
+			z-index: 4;
+			color: white;
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			transform: translateY(0);
+			transition: 0.3s transform ease-in-out;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+
+		&:hover {
+			.meta-wrapper {
+				transform: translateY(-10px);
+			}
+			.img-wrapper {
+				transform: scale(1);
+			}
+			::after {
+				transform: scale(1);
 			}
 		}
 	}
