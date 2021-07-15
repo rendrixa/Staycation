@@ -7,6 +7,7 @@ import IconTraveler from "assets/images/icons/ic_traveler.svg";
 import IconTreasure from "assets/images/icons/ic_treasure.svg";
 import Button from "elements/button";
 import NumberFormat from "react-number-format";
+import Fade from "react-reveal/Fade";
 
 export default function Hero(props) {
 	function showMostPicked() {
@@ -21,7 +22,12 @@ export default function Hero(props) {
 			<div className="row">
 				<div className="col-lg-6 col-sm-6">
 					<h1 className="text-dark mb-4" style={{ fontWeight: 700 }}>
-						Forget Busy Work, <br /> Start Next Vacation
+						<Fade cascade left>
+							Forget Busy Work,
+						</Fade>
+						<Fade cascade right>
+							Start Next Vacation
+						</Fade>
 					</h1>
 					<p className="text-gray-400 mb-4 w-50" style={{ fontWeight: 300 }}>
 						We provide what you need to enjoy your holiday with family. Time to
