@@ -18,7 +18,7 @@
   ],
   "country": "Indonesia",
   "city": "Bogor",
-  "price": "52",
+  "price": 100,
   "unit": "night",
   "isPopular": true,
   "hasBackyard": true,
@@ -107,7 +107,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "PSW Antasari",
-          "imageUrl": "/images/treasure-1.jpg",
+          "imageUrl": "/images/categoryItem1.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -115,7 +115,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Kuretakeso",
-          "imageUrl": "/images/treasure-2.jpg",
+          "imageUrl": "/images/categoryItem2.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
@@ -123,7 +123,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Arya Duta",
-          "imageUrl": "/images/treasure-3.jpg",
+          "imageUrl": "/images/categoryItem3.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": true
@@ -131,7 +131,7 @@
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
-          "imageUrl": "/images/treasure-4.jpg",
+          "imageUrl": "/images/categoryItem4.jpg",
           "country": "South Korea",
           "city": "Seoul Flore",
           "isPopular": false
